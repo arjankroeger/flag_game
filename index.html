@@ -11,40 +11,55 @@
 
 <body>
   <h1 >Flaggen Spiel</h1>
-	<div class="grid-container">
-		<div class="grid-item"> <img id="v111" src="statics/white.png" class="img-var"> <img id="v112"  src="statics/white.png" class="img-var" > </div>
-		<div class="grid-item" id="o11"></div>
-		<div class="grid-item"> <img id="v12" src="statics/white.png" class="img-var"></div>
-		<div class="grid-item">=</div>
-		<div class="grid-item" >  <img id="v131" src="statics/white.png" class="img-var"><img id="v132" src="statics/white.png" class="img-var"></div>
-		<div class="grid-item" id="o21"></div>
-		<div class="grid-item" id="empty"></div>
-		<div class="grid-item" id="o22"></div>
-		<div class="grid-item" id="empty"></div>
-		<div class="grid-item" id="o23"></div>
-		<div class="grid-item" > <img id="v21" src="statics/white.png" class="img-var"></div>
-		<div class="grid-item" id="o31"></div>
-		<div class="grid-item" > <img id="v22" src="statics/white.png" class="img-var"></div>
-		<div class="grid-item">=</div>
-		<div class="grid-item" > <img id="v23" src="statics/white.png" class="img-var"></div>
+  	<div class="quiz">
+		<div class="grid-container">
+			<div class="grid-item"> <img id="v111" src="statics/white.png" class="img-var"> <img id="v112"  src="statics/white.png" class="img-var" > </div>
+			<div class="grid-item" id="o11"></div>
+			<div class="grid-item"> <img id="v12" src="statics/white.png" class="img-var"></div>
+			<div class="grid-item">=</div>
+			<div class="grid-item" >  <img id="v131" src="statics/white.png" class="img-var"><img id="v132" src="statics/white.png" class="img-var"></div>
+			<div class="grid-item" id="o21"></div>
+			<div class="grid-item" id="empty"></div>
+			<div class="grid-item" id="o22"></div>
+			<div class="grid-item" id="empty"></div>
+			<div class="grid-item" id="o23"></div>
+			<div class="grid-item" > <img id="v21" src="statics/white.png" class="img-var"></div>
+			<div class="grid-item" id="o31"></div>
+			<div class="grid-item" > <img id="v22" src="statics/white.png" class="img-var"></div>
+			<div class="grid-item">=</div>
+			<div class="grid-item" > <img id="v23" src="statics/white.png" class="img-var"></div>
+		</div>
+		<hr class="thick-line">
+		<div class="grid-container">
+			<div class="grid-item" ><img id="v311" src="statics/white.png" class="img-var"><img id="v312" src="statics/white.png" class="img-var"></div>
+			<div class="grid-item" id="o51"></div>
+			<div class="grid-item" > <img id="v32" src="statics/white.png" class="img-var"></div>
+			<div class="grid-item">=</div>
+			<div class="grid-item" >  <img id="v331" src="statics/white.png" class="img-var"><img id="v332" src="statics/white.png" class="img-var"></div>
+		</div>
 	</div>
-	<hr class="thick-line">
-	<div class="grid-container">
-		<div class="grid-item" ><img id="v311" src="statics/white.png" class="img-var"><img id="v312" src="statics/white.png" class="img-var"></div>
-		<div class="grid-item" id="o51"></div>
-		<div class="grid-item" > <img id="v32" src="statics/white.png" class="img-var"></div>
-		 <div class="grid-item">=</div>
-		<div class="grid-item" >  <img id="v331" src="statics/white.png" class="img-var"><img id="v332" src="statics/white.png" class="img-var"></div>
+	
+	<div class="solution">
+		<div class="solution-item"></div>
+		<div class="solution-item"></div>
+		<div class="solution-item"></div>
+		<div class="solution-item"></div>
+		<div class="solution-item"></div>
+		<div class="solution-item"></div>
+		<div class="solution-item"></div>
+		<div class="solution-item"></div>
+		<div class="solution-item"></div>
 	</div>
+
 	<label for="user-input">Enter 4 letters/numbers:</label>
 	<input type="text" id="userinput" name="userinput" maxlength="4">
-  <button onclick="generateRandom()" id="generate-btn" class="generate-btn">Generate Random</button>
-  <button onclick="startGame()" id="start-btn" class="start-btn">Start Game</button>
-  <button onclick="showSolution()" id="solution-btn" class="solution-btn">Show Solution</button>
-  <label class="switch">
-    <input type="checkbox" id="boolflags" onclick="fillGrid()" checked>
-    <span class="slider round"></span>
-  </label>
+	<button onclick="generateRandom()" id="generate-btn" class="generate-btn">Generate Random</button>
+	<button onclick="startGame()" id="start-btn" class="start-btn">Start Game</button>
+	<button onclick="showSolution()" id="solution-btn" class="solution-btn">Show Solution</button>
+	<label class="switch">
+		<input type="checkbox" id="boolflags" onclick="fillGrid()" checked>
+		<span class="slider round"></span>
+	</label>
   
   <script src="js/scripts.js"></script>
 </body>

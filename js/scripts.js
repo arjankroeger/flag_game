@@ -5,6 +5,9 @@ function generateRandom() {
       randomText += letters.charAt(Math.floor(Math.random() * letters.length));
     }
 
+
+    document.getElementById("userinput").readOnly = true;
+
     let userinput = document.getElementById("userinput");
     userinput.value = randomText;
 
@@ -17,7 +20,8 @@ function startGame(){
     var solutionbtn = document.getElementById("solution-btn");
     solutionbtn.style.display = "block";
 
-    
+    document.getElementById("userinput").readOnly = true;
+
     fillGrid();
 
 } 
@@ -175,6 +179,8 @@ function showSolution(){
     solutionbtn.style.display = "none";
     var generatebtn = document.getElementById("generate-btn");
     generatebtn.style.display = "block";
+
+    document.getElementById("userinput").readOnly = false;
 
     
 
