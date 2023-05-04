@@ -14,19 +14,27 @@ img{
 }
 .img-var-letter{
     width: 35px;
-    opacity: 1;
+	height: 60px;
 }
 .img-var-flag{
     width: 100px;
-    opacity: 1;
 }
 
-.quiz{
+.quizgrid{
 	display: grid;
 }
 
-.solution{
+.solutiongrid{
 	display: none;
+}
+.solution-container{
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 50px;
+	padding: 20px;
+	margin: 0 auto;
+	max-width: 800px;
 }
 
 

@@ -10,8 +10,8 @@
 </head>
 
 <body>
-  <h1 >Flaggen Spiel</h1>
-  	<div class="quiz">
+	<h1 >Flaggen Spiel</h1>
+	<div id="quizgrid" class="quizgrid">
 		<div class="grid-container">
 			<div class="grid-item"> <img id="v111" src="statics/white.png" class="img-var"> <img id="v112"  src="statics/white.png" class="img-var" > </div>
 			<div class="grid-item operator" id="o11"></div>
@@ -39,16 +39,19 @@
 		</div>
 	</div>
 	
-	<div class="solution">
-		<div class="solution-item"></div>
-		<div class="solution-item"></div>
-		<div class="solution-item"></div>
-		<div class="solution-item"></div>
-		<div class="solution-item"></div>
-		<div class="solution-item"></div>
-		<div class="solution-item"></div>
-		<div class="solution-item"></div>
-		<div class="solution-item"></div>
+	<div id="solutiongrid" class="solutiongrid">
+		<div class="solution-container">
+			<div class="grid-item"> <img id="sol-a-i" src="statics/white.png" class="img-var"> <p id="sol-a-v" class="operator"></p>  </div>
+			<div class="grid-item"> <img id="sol-b-i" src="statics/white.png" class="img-var"> <p id="sol-b-v" class="operator"></p>  </div>
+			<div class="grid-item"> <img id="sol-c-i" src="statics/white.png" class="img-var"> <p id="sol-c-v" class="operator"></p>  </div>
+			<div class="grid-item"> <img id="sol-d-i" src="statics/white.png" class="img-var"> <p id="sol-d-v" class="operator"></p>  </div>
+			<div class="grid-item"> <img id="sol-e-i" src="statics/white.png" class="img-var"> <p id="sol-e-v" class="operator"></p>  </div>
+			<div class="grid-item"> <img id="sol-f-i" src="statics/white.png" class="img-var"> <p id="sol-f-v" class="operator"></p>  </div>
+			<div class="grid-item"> <img id="sol-g-i" src="statics/white.png" class="img-var"> <p id="sol-g-v" class="operator"></p>  </div>
+			<div class="grid-item"> <img id="sol-h-i" src="statics/white.png" class="img-var"> <p id="sol-h-v" class="operator"></p>  </div>
+			<div class="grid-item"> <img id="sol-i-i" src="statics/white.png" class="img-var"> <p id="sol-i-v" class="operator"></p>  </div>
+
+		</div>
 	</div>
 
 	<label for="user-input">Enter 4 letters/numbers:</label>

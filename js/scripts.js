@@ -1,3 +1,5 @@
+let quizcontent
+
 function generateRandom() {
     let letters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let randomText = "";
@@ -11,6 +13,33 @@ function generateRandom() {
 
     let userinput = document.getElementById("userinput");
     userinput.value = randomText;
+
+    document.getElementById("v111").src = "statics/white.png"
+    document.getElementById("v112").src = "statics/white.png"
+    document.getElementById("v12").src = "statics/white.png"
+    document.getElementById("v131").src = "statics/white.png"
+    document.getElementById("v132").src = "statics/white.png"
+    document.getElementById("v21").src = "statics/white.png"
+    document.getElementById("v22").src = "statics/white.png"
+    document.getElementById("v23").src = "statics/white.png"
+    document.getElementById("v311").src = "statics/white.png"
+    document.getElementById("v312").src = "statics/white.png"
+    document.getElementById("v32").src = "statics/white.png"
+    document.getElementById("v331").src = "statics/white.png"
+    document.getElementById("v332").src = "statics/white.png"
+
+    document.getElementById("o11").innerHTML = ""
+    document.getElementById("o21").innerHTML = ""
+    document.getElementById("o22").innerHTML = ""
+    document.getElementById("o23").innerHTML = ""
+    document.getElementById("o31").innerHTML = ""
+    document.getElementById("o51").innerHTML = ""
+
+    var quizgrid = document.getElementById("quizgrid")
+    quizgrid.style.display = "grid"
+    var solutiongrid = document.getElementById("solutiongrid")
+    solutiongrid.style.display = "none"
+    
 
     handleInput();
   }
@@ -43,27 +72,21 @@ function fillGrid(){
     .then(response => response.text())
     .then(text => {
         var lines = text.split("\n");
-        var quizcontent = lines[quizid];
+        quizcontent = lines[quizid];
 
         //alert(quizcontent)
         
-        var o11 = document.getElementById("o11");
-        o11.innerHTML = quizcontent.charAt(0);
+        document.getElementById("o11").innerHTML = quizcontent.charAt(0);
         
-        var o21 = document.getElementById("o21");
-        o21.innerHTML = quizcontent.charAt(1);
+        document.getElementById("o21").innerHTML = quizcontent.charAt(1);
         
-        var o22 = document.getElementById("o22");
-        o22.innerHTML = quizcontent.charAt(2);
+        document.getElementById("o22").innerHTML = quizcontent.charAt(2);
         
-        var o23 = document.getElementById("o23");
-        o23.innerHTML = quizcontent.charAt(3);
+        document.getElementById("o23").innerHTML = quizcontent.charAt(3);
         
-        var o31 = document.getElementById("o31");
-        o31.innerHTML = quizcontent.charAt(4);
+        document.getElementById("o31").innerHTML = quizcontent.charAt(4);
         
-        var o51 = document.getElementById("o51");
-        o51.innerHTML = quizcontent.charAt(5);
+        document.getElementById("o51").innerHTML = quizcontent.charAt(5);
 
         const mySwitch = document.getElementById("boolflags");
         if (mySwitch.checked) {
@@ -80,45 +103,31 @@ function fillGrid(){
             }
 
 
-            var v111 = document.getElementById("v111");
-            v111.src = "statics/f"+quizcontent.charAt(6)+".png";
+            document.getElementById("v111").src = "statics/f"+quizcontent.charAt(6)+".png";           
+            document.getElementById("v112").src = "statics/f"+quizcontent.charAt(7)+".png";            
+            document.getElementById("v12").src = "statics/f"+quizcontent.charAt(8)+".png";            
+            document.getElementById("v131").src = "statics/f"+quizcontent.charAt(9)+".png";            
+            document.getElementById("v132").src = "statics/f"+quizcontent.charAt(10)+".png";           
+            document.getElementById("v21").src = "statics/f"+quizcontent.charAt(11)+".png";            
+            document.getElementById("v22").src = "statics/f"+quizcontent.charAt(12)+".png";            
+            document.getElementById("v23").src = "statics/f"+quizcontent.charAt(13)+".png";           
+            document.getElementById("v311").src = "statics/f"+quizcontent.charAt(14)+".png";            
+            document.getElementById("v312").src = "statics/f"+quizcontent.charAt(15)+".png";
+            document.getElementById("v32").src = "statics/f"+quizcontent.charAt(16)+".png";            
+            document.getElementById("v331").src = "statics/f"+quizcontent.charAt(17)+".png";
+            document.getElementById("v332").src = "statics/f"+quizcontent.charAt(18)+".png";
             
-            var v112 = document.getElementById("v112");
-            v112.src = "statics/f"+quizcontent.charAt(7)+".png";
-            
-            var v12 = document.getElementById("v12");
-            v12.src = "statics/f"+quizcontent.charAt(8)+".png";
-            
-            var v131 = document.getElementById("v131");
-            v131.src = "statics/f"+quizcontent.charAt(9)+".png";
-            
-            var v132 = document.getElementById("v132");
-            v132.src = "statics/f"+quizcontent.charAt(10)+".png";
-            
-            var v21 = document.getElementById("v21");
-            v21.src = "statics/f"+quizcontent.charAt(11)+".png";
-            
-            var v22 = document.getElementById("v22");
-            v22.src = "statics/f"+quizcontent.charAt(12)+".png";
-            
-            var v23 = document.getElementById("v23");
-            v23.src = "statics/f"+quizcontent.charAt(13)+".png";
-            
-            var v311 = document.getElementById("v311");
-            v311.src = "statics/f"+quizcontent.charAt(14)+".png";
-            
-            var v312 = document.getElementById("v312");
-            v312.src = "statics/f"+quizcontent.charAt(15)+".png";
+            //solutions
+            document.getElementById("sol-a-i").src="statics/fa.png";
+            document.getElementById("sol-b-i").src="statics/fb.png";
+            document.getElementById("sol-c-i").src="statics/fc.png";
+            document.getElementById("sol-d-i").src="statics/fd.png";
+            document.getElementById("sol-e-i").src="statics/fe.png";
+            document.getElementById("sol-f-i").src="statics/ff.png";
+            document.getElementById("sol-g-i").src="statics/fg.png";
+            document.getElementById("sol-h-i").src="statics/fh.png";
+            document.getElementById("sol-i-i").src="statics/fi.png";
 
-            var v32 = document.getElementById("v32");
-            v32.src = "statics/f"+quizcontent.charAt(16)+".png";
-            
-            var v331 = document.getElementById("v331");
-            v331.src = "statics/f"+quizcontent.charAt(17)+".png";
-            
-            var v332 = document.getElementById("v332");
-            v332.src = "statics/f"+quizcontent.charAt(18)+".png";
-        
         } 
         else {
 
@@ -131,46 +140,54 @@ function fillGrid(){
                 elemtens[i].classList.add("img-var-letter");
               }
             }
-            var v111 = document.getElementById("v111");
-            v111.src = "statics/"+quizcontent.charAt(6)+".png";
-            
-            var v112 = document.getElementById("v112");
-            v112.src = "statics/"+quizcontent.charAt(7)+".png";
-            
-            var v12 = document.getElementById("v12");
-            v12.src = "statics/"+quizcontent.charAt(8)+".png";
-            
-            var v131 = document.getElementById("v131");
-            v131.src = "statics/"+quizcontent.charAt(9)+".png";
-            
-            var v132 = document.getElementById("v132");
-            v132.src = "statics/"+quizcontent.charAt(10)+".png";
-            
-            var v21 = document.getElementById("v21");
-            v21.src = "statics/"+quizcontent.charAt(11)+".png";
-            
-            var v22 = document.getElementById("v22");
-            v22.src = "statics/"+quizcontent.charAt(12)+".png";
-            
-            var v23 = document.getElementById("v23");
-            v23.src = "statics/"+quizcontent.charAt(13)+".png";
-            
-            var v311 = document.getElementById("v311");
-            v311.src = "statics/"+quizcontent.charAt(14)+".png";
-            
-            var v312 = document.getElementById("v312");
-            v312.src = "statics/"+quizcontent.charAt(15)+".png";
 
-            var v32 = document.getElementById("v32");
-            v32.src = "statics/"+quizcontent.charAt(16)+".png";
-            
-            var v331 = document.getElementById("v331");
-            v331.src = "statics/"+quizcontent.charAt(17)+".png";
-            
-            var v332 = document.getElementById("v332");
-            v332.src = "statics/"+quizcontent.charAt(18)+".png";
+            document.getElementById("v111").src = "statics/"+quizcontent.charAt(6)+".png";
+            document.getElementById("v112").src = "statics/"+quizcontent.charAt(7)+".png";
+            document.getElementById("v12").src = "statics/"+quizcontent.charAt(8)+".png";
+            document.getElementById("v131").src = "statics/"+quizcontent.charAt(9)+".png";
+            document.getElementById("v132").src = "statics/"+quizcontent.charAt(10)+".png";
+            document.getElementById("v21").src = "statics/"+quizcontent.charAt(11)+".png";
+            document.getElementById("v22").src = "statics/"+quizcontent.charAt(12)+".png";
+            document.getElementById("v23").src = "statics/"+quizcontent.charAt(13)+".png";
+            document.getElementById("v311").src = "statics/"+quizcontent.charAt(14)+".png";
+            document.getElementById("v312").src = "statics/"+quizcontent.charAt(15)+".png";
+            document.getElementById("v32").src = "statics/"+quizcontent.charAt(16)+".png";
+            document.getElementById("v331").src = "statics/"+quizcontent.charAt(17)+".png";
+            document.getElementById("v332").src = "statics/"+quizcontent.charAt(18)+".png";
         
+            //solutions
+            document.getElementById("sol-a-i").src="statics/a.png";
+            document.getElementById("sol-b-i").src="statics/b.png";
+            document.getElementById("sol-c-i").src="statics/c.png";
+            document.getElementById("sol-d-i").src="statics/d.png";
+            document.getElementById("sol-e-i").src="statics/e.png";
+            document.getElementById("sol-f-i").src="statics/f.png";
+            document.getElementById("sol-g-i").src="statics/g.png";
+            document.getElementById("sol-h-i").src="statics/h.png";
+            document.getElementById("sol-i-i").src="statics/i.png";
         }
+      
+
+      //solutions
+      if (quizcontent.indexOf("a") >= 0){  document.getElementById("sol-a-v").innerHTML= ": "+quizcontent.charAt(quizcontent.indexOf("a")+13)}
+      else{document.getElementById("sol-a-v").innerHTML= ": NaN"}
+      if (quizcontent.indexOf("b") >= 0){  document.getElementById("sol-b-v").innerHTML= ": "+quizcontent.charAt(quizcontent.indexOf("b")+13)}
+      else{document.getElementById("sol-b-v").innerHTML= ": NaN"}
+      if (quizcontent.indexOf("c") >= 0){  document.getElementById("sol-c-v").innerHTML= ": "+quizcontent.charAt(quizcontent.indexOf("c")+13)}
+      else{document.getElementById("sol-c-v").innerHTML= ": NaN"}
+      if (quizcontent.indexOf("d") >= 0){  document.getElementById("sol-d-v").innerHTML= ": "+quizcontent.charAt(quizcontent.indexOf("d")+13)}
+      else{document.getElementById("sol-d-v").innerHTML= ": NaN"}
+      if (quizcontent.indexOf("e") >= 0){  document.getElementById("sol-e-v").innerHTML= ": "+quizcontent.charAt(quizcontent.indexOf("e")+13)}
+      else{document.getElementById("sol-e-v").innerHTML= ": NaN"}
+      if (quizcontent.indexOf("f") >= 0){  document.getElementById("sol-f-v").innerHTML= ": "+quizcontent.charAt(quizcontent.indexOf("f")+13)}
+      else{document.getElementById("sol-f-v").innerHTML= ": NaN"}
+      if (quizcontent.indexOf("g") >= 0){  document.getElementById("sol-g-v").innerHTML= ": "+quizcontent.charAt(quizcontent.indexOf("g")+13)}
+      else{document.getElementById("sol-g-v").innerHTML= ": NaN"}
+      if (quizcontent.indexOf("h") >= 0){  document.getElementById("sol-h-v").innerHTML= ": "+quizcontent.charAt(quizcontent.indexOf("h")+13)}
+      else{document.getElementById("sol-h-v").innerHTML= ": NaN"}
+      if (quizcontent.indexOf("i") >= 0){  document.getElementById("sol-i-v").innerHTML= ": "+quizcontent.charAt(quizcontent.indexOf("i")+13)}
+      else{document.getElementById("sol-i-v").innerHTML= ": NaN"}
+      
 
   })
 }
@@ -183,7 +200,11 @@ function showSolution(){
 
     document.getElementById("userinput").readOnly = false;
 
-    
+    var quizgrid = document.getElementById("quizgrid")
+    quizgrid.style.display = "none"
+    var solutiongrid = document.getElementById("solutiongrid")
+    solutiongrid.style.display = "grid"
+
 
 } 
   
