@@ -43,11 +43,15 @@ img{
 .grid-item {
 	border-radius: 5px;
 	text-align: center;
-	font-size: 24px;
 	font-weight: bold;
 	transition: all 0.3s ease;
     display: flex;
     margin: 0 auto;
+}
+
+.operator{
+ font-size: 40px;
+ margin-top: 15px;
 }
 
 

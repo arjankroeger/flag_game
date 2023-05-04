@@ -6,7 +6,8 @@ function generateRandom() {
     }
 
 
-    document.getElementById("userinput").readOnly = true;
+    document.getElementById("userinput").readOnly = false;
+    
 
     let userinput = document.getElementById("userinput");
     userinput.value = randomText;
