@@ -85,6 +85,14 @@ img{
 	grid-template-rows: repeat(1, 1fr);
 }
 
+.timer{
+	display: block;
+	margin: 20px auto 10px;
+	text-align: center;
+	font-size: 22px;
+}
+
+
 label {
 	display: block;
 	margin: 20px auto 10px;

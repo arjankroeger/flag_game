@@ -1,5 +1,26 @@
 let quizcontent
 
+
+let timerInterval;
+let minutes = 0;
+let seconds = 0;
+
+
+function incrementTimer() {
+  seconds++;
+  if (seconds === 60) {
+    minutes++;
+    seconds = 0;
+  }
+  const formattedMinutes = padNumberWithZero(minutes);
+  const formattedSeconds = padNumberWithZero(seconds);
+  document.getElementById("timer").innerText = `${formattedMinutes}:${formattedSeconds}`;
+}
+
+function padNumberWithZero(number) {
+  return number.toString().padStart(2, "0");
+}
+
 function generateRandom() {
     let letters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let randomText = "";
@@ -51,6 +72,8 @@ function startGame(){
     solutionbtn.style.display = "block";
 
     document.getElementById("userinput").readOnly = true;
+
+    timerInterval = setInterval(incrementTimer, 1000);
 
     fillGrid();
 
@@ -204,6 +227,8 @@ function showSolution(){
     quizgrid.style.display = "none"
     var solutiongrid = document.getElementById("solutiongrid")
     solutiongrid.style.display = "grid"
+
+    clearInterval(timerInterval);
 
 
 } 
